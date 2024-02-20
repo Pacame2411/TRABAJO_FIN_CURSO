@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+body, html {
+    margin: 0; /* Asegura que no haya márgenes en el cuerpo y el HTML */
+    padding: 0; /* Asegura que no haya relleno */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100vh; /* Ajusta según sea necesario */
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+#informacion-iconos:hover {
+    transform: scale(1.05); /* Cambia el tamaño al hacer hover */
+    transition: transform 0.6s; /* Agrega una transición para suavizar el efecto */
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, rgba(85, 85, 85, 0.8), rgba(34, 34, 34, 0.8)); /* Gradiente opaco */
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente los elementos */
+    overflow-x: hidden; /* Para evitar la barra de desplazamiento horizontal cuando el menú está oculto */
+}
+
+
+#logo img {
+    flex-shrink: 0; /* Evita que el logo afecte el tamaño del botón */
+    max-height: 75px;
+    width: 50px;
+    height: 50px;
+}
+
+#logo {
+    flex-shrink: 0; /* Evita que el logo afecte el tamaño del botón */
+}
+
+#branding {
+    flex-grow: 1;
+    text-align: center; /* Centra el texto dentro de #branding */
+}
+
+#menu-btn {
+    width: 65px; /* Establece un ancho fijo para el botón */
+    height: 65px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Inicialmente fuera del área visible */
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Agrega transición para suavizar la animación */
+    right: -250px; /* Posición inicial fuera del área visible */
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu li {
+    margin-bottom: 10px;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    transition: background-color 0.3s; /* Agrega una transición para suavizar el efecto */
+}
+
+#menu a:hover {
+    background-color: #555; /* Cambia el color de fondo al hacer hover */
+}
+
+#cerrar-menu {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#cerrar-menu:hover {
+    background-color: #777; /* Cambia el color de fondo al hacer hover */
+}
+
+#menu button {
+    background-color: #5555558e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+nav button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+#informacion-iconos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente blanco */
+}
+
+.icono-info {
+    text-align: center;
+}
+
+.icono-info img {
+    width: 50px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 50px;
+}
+
+.icono-info p {
+    margin-top: 20px;
+    padding: 10px;
+}
+#imagenes-estaticas {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    margin: 0; /* Elimina cualquier margen exterior */
+    overflow: hidden; /* Mantiene oculto el contenido que se desborde */
+}
+
+
+.imagen-estatica {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra la imagen verticalmente */
+    overflow: hidden; /* Oculta las partes de la imagen que se desborden */
+}
+
+
+.imagen-estatica img {
+    max-height: 300px; /* Ajusta esta altura según tus necesidades */
+    width: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Cubre el área asignada sin distorsionar la imagen */
+}
+
+.imagen-estatica {
+    flex: 0 0 100%; /* No permite que las imágenes crezcan o se encojan */
+}
+
+.carrusel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+#carrusel-anterior, #carrusel-siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#carrusel-anterior { left: 10px; }
+#carrusel-siguiente { right: 10px; }
+
+.imagen-estatica img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#politicas a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#redes-sociales a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#imagen-contenido img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#imagen-contenido {
+    width: 80%;
+    height: -10%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#seccion-imagen {
+    margin-bottom: 10px;
+    flex-grow: 1; /* Añadido para que ocupe todo el espacio disponible */
+}
+
+
+#seccion-imagen img {
+    width: 100%;
+    max-height: 300px; /* Ajusta este valor según tus necesidades */
+    object-fit: cover; /* Esto recortará la imagen para mantener la relación de aspecto */
+}
+#blog-seccion {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en los extremos */
+    padding: 20px;
+}
+
+.blog-caja {
+    width: 48%; /* Cada caja ocupa cerca del 48% del espacio para dejar algo de espacio entre ellas */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.blog-caja h2 {
+    margin-top: 0;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 600px) {
+    #blog-seccion {
+        flex-direction: column; /* Las cajas se apilan verticalmente en pantallas pequeñas */
+    }
+
+    .blog-caja {
+        width: 100%; /* Cada caja ocupa todo el ancho en pantallas pequeñas */
+    }
+}
+
+#blogtitulo{
+    text-align: center;
+}
